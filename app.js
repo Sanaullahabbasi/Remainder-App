@@ -9,10 +9,7 @@ function setReminder() {
   }
  
   // Parse the time and convert it to milliseconds
-  const milliseconds = new Date(reminderTime) - new Date();
-  console.log(new Date(reminderTime));
-  console.log(new Date());
-  console.log(milliseconds);
+  const milliseconds = new Date(reminderTime).getTime() - new Date().getTime();
 
   // Set a timeout to show the notification
   setTimeout(() => {

@@ -14,4 +14,37 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.main h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.main button{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(89, 0, 255);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 9px;
+    margin: 15px;
+}
+.main input {
+    width: 237px;
+    height: 49px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.main label {
+    margin: 15px;
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    color: blueviolet;
 }
