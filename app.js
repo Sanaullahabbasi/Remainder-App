@@ -23,7 +23,7 @@ function showNotification() {
   // Check if the Notification API is available
   if (!("Notification" in window)) {
     alert("This browser does not support desktop notification");
-  } else if (Notification.permission === "granted") {
+  } else if (Notification.permission === "defualt") {
     // If permission is already granted, show the notification
     new Notification("Reminder", {
       body: "It's time for your reminder!",
@@ -40,3 +40,5 @@ function showNotification() {
     });
   }
 }
+
+// console.log(window);
