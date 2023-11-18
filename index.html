@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reminder App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reminder App</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
     <script>
-        //if browser support service worker
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js');
-        };
-      </script>
-</head>
-<body>
+      //if browser support service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Set a Reminder</h2>
+      <label for="reminderTime">Set Reminder date and time:</label>
+      <input type="datetime-local" id="reminderTime" required />
+      <button onclick="setReminder()">Set Reminder</button>
+    </div>
 
-<div class="main">
-    <h2>Set a Reminder</h2>
-    <label for="reminderTime">Enter reminder time:</label>
-    <input type="datetime-local" id="reminderTime" required>
-    <button onclick="setReminder()">Set Reminder</button>
-</div>
-
-</body>
-</html>
-
-
-
-
-<script src="sw.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
