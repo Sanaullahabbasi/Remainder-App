@@ -3,7 +3,7 @@ let ringtone = new Audio("audio/ringtone.mp3");
 function setReminder() {
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
-
+console.log(reminderTime);
   // Validate the input
   if (!reminderTime) {
     alert("Please enter a valid time for the reminder.");

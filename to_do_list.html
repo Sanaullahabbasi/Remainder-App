@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do List</title>
-    <link rel="stylesheet" href="toDo.css">
-</head>
-<body>
+    <link rel="stylesheet" href="toDo.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <!--  ### to do list main container ##-->
     <div id="container">
-        <div id="header">
-            <div id="day"></div>
-            <div id="time"></div>
+        <!-- header to show current day and time -->
+      <div id="header">
+        <div id="day"></div>
+        <div id="time"></div>
+      </div>
+      <!-- text where to show reminder or to do list -->
+      <div id="input_area">
+        <div id="add_title">
+          <div class="form-check" id="tick">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+          <div id="del_btn">
+            <button><i class="fa-solid fa-trash-can"></i></button>
+          </div>
         </div>
-        <div id="input_area">
-            <div id="tick"><input type="checkbox"></div>
-            <div id="set_time"><input type="datetime-local"></div>
-            <div></div>
-        </div>
-
+      </div>
+      <!-- bottom of container where place a circle to show add icon -->
+      <div id="circle add_rem"><i class="fa-solid fa-plus"></i></div>
     </div>
 
-
-    
     <script src="toDo.js"></script>
-</body>
+  </body>
 </html>
