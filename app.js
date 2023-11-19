@@ -1,3 +1,5 @@
+let ringtone = new Audio("audio/ringtone.mp3");
+
 function setReminder() {
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
@@ -35,6 +37,8 @@ function showNotification() {
         new Notification("Reminder", {
           body: "granted It's time for your reminder!",
         });
+        ringtone.play();
+        ringtone.loop = true;
       }
     });
   }
