@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url(fonts/CormorantGaramond-Regular.ttf);
+}
+@font-face {
+  font-family: "BlackOpsOne";
+  src: url(fonts/BlackOpsOne-Regular.ttf);
+}
+
+
+
 body {
   display: flex;
   align-items: center;
@@ -18,9 +29,10 @@ body {
 }
 
 .main h2 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "CormorantGaramond";
   font-size: 40px;
   font-weight: bold;
+  text-align: center;
 }
 
 .main button {
