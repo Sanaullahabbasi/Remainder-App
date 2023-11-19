@@ -1,6 +1,12 @@
 let ringtone = new Audio("audio/ringtone.mp3");
 
 function setReminder() {
+  addRemUI.style.display = "none";
+  mainUI.style.display = "block";
+  mainUITitle.innerHTML = remTitle.value;
+  
+  console.log(remTitle.value);
+  console.log(mainUITitle);
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
@@ -42,8 +48,6 @@ function showNotification() {
     });
   }
 }
-
-
 
 // **** Dashboard Javascript programming ****
 let day = document.getElementById("day"),
@@ -99,11 +103,17 @@ timeInterval = setInterval(function () {
   time.innerHTML = msToTime();
 }, 10);
 
-// *****  adding reminder setting ***** 
+// *****  adding reminder setting *****
 let mainUI = document.getElementById("container"),
-addRemUI = document.querySelector(".main");
-function addRem (){
-  addRemUI.style.display= "block";
-  addRemUI.style.display= "flex";
-mainUI.style.display = "none";
+  addRemUI = document.querySelector(".main"),
+  remTitle = document.getElementById("rem_title"),
+  mainUITitle = document.getElementById("title");
+
+  console.log(remTitle.value)
+  
+  function addRem() {
+  
+  addRemUI.style.display = "block";
+  addRemUI.style.display = "flex";
+  mainUI.style.display = "none";
 }

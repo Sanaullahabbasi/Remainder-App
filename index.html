@@ -41,7 +41,7 @@
     <div class="main" style="display: none;">
       <h2>Add  Reminder</h2>
       <label for=""
-      ><input type="text" placeholder="Enter Title"></label
+      ><input type="text" placeholder="Enter Title" id="rem_title" value="Title"></label
       >
       <input type="datetime-local" id="reminderTime" required />
       <button onclick="setReminder()">Set Reminder</button>
@@ -50,7 +50,7 @@
   
 
     <!--  ### to do list main container ##-->
-    <div id="container">
+    <div id="container" >
       <!-- header to show current day and time -->
     <div id="header">
       <div id="day"></div>
@@ -62,7 +62,7 @@
         <div class="form-check" id="tick">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
           <label class="form-check-label" for="flexCheckChecked">
-            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="title" placeholder="Title" value="">
           </label>
         </div>
         <div id="del_btn">
