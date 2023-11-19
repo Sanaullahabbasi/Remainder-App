@@ -2,6 +2,10 @@
     font-family: "CormorantGaramond";
     src: url(fonts/CormorantGaramond-Regular.ttf);
 }
+@font-face {
+    font-family: "BlackOpsOne";
+    src: url(fonts/BlackOpsOne-Regular.ttf);
+}
 
 body{
     font-family: "CormorantGaramond";
@@ -31,5 +35,10 @@ body{
     justify-content: space-around;
     align-items: center;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bolder;
+}
+#time{
+    font-family: "BlackOpsOne";
+    font-weight: lighter;
+    font-size: 18px;
 }
