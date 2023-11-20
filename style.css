@@ -157,7 +157,8 @@ body {
 @media only screen and (max-width: 576px) {
   body {
     padding: 0px;
-    
+    margin: 5px !important;
+    overflow-x: hidden;
   }
   .main {
     width: 100%;
@@ -176,8 +177,8 @@ body {
     width: 200px;
     font-size: 14px;
   }
-  #container, #header, #input_area {
-width: 300px;}
+  #container, #header, #input_area, #title {
+width: 100%;}
 #circle{
   width: 40px;
   height: 40px;
