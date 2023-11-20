@@ -1,16 +1,12 @@
 let ringtone = new Audio("audio/ringtone.mp3");
 let mainUI = document.getElementById("container"),
   addRemUI = document.querySelector(".main"),
-  remTitle = document.getElementById("rem_title").value,
-  mainUITitle = document.getElementById("title").value;
-  localStorage.setItem("title", JSON.stringify(remTitle));
+  remTitle = document.getElementById("rem_title"),
+  mainUITitle = document.getElementById("title");
 
 function setReminder() {
   addRemUI.style.display = "none";
   mainUI.style.display = "block";
-  remTitle.innerHTML = JSON.parse(localStorage.getItem("Title")); 
-  console.log(mainUITitle,"why", remTitle)
-  
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
@@ -26,6 +22,12 @@ function setReminder() {
   setTimeout(() => {
     showNotification();
   }, milliseconds);
+  remTitle.innerHTML = mainUITitle.value;
+  console.log(remTitle.value, "jaha print krwana he", mainUITitle.value)
+
+  // localStorage.setItem("title", JSON.stringify(remTitle.value));
+  // mainUITitle.value = JSON.parse(localStorage.getItem("Title"));
+  // console.log(mainUITitle.value, "why", remTitle.value);
 }
 
 function showNotification() {
@@ -109,11 +111,11 @@ timeInterval = setInterval(function () {
 
 // *****  adding reminder setting *****
 
-
-  
-  function addRem() {
-    
-    addRemUI.style.display = "block";
-    addRemUI.style.display = "flex";
-    mainUI.style.display = "none";
+function addRem() {
+  addRemUI.style.display = "block";
+  addRemUI.style.display = "flex";
+  mainUI.style.display = "none";
 }
+
+
+
