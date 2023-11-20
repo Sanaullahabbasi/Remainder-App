@@ -2,7 +2,9 @@ let ringtone = new Audio("audio/ringtone.mp3");
 let mainUI = document.getElementById("container"),
   addRemUI = document.querySelector(".main"),
   remTitle = document.getElementById("rem_title"),
-  mainUITitle = document.getElementById("title");
+  mainUITitle = document.getElementById("title"),
+  mainText = document.getElementById("mainText"),
+  dumText = document.getElementById("dum");
 
 function setReminder() {
   addRemUI.style.display = "none";
@@ -16,18 +18,17 @@ function setReminder() {
   }
 
   // Parse the time and convert it to milliseconds
+
   const milliseconds = new Date(reminderTime).getTime() - new Date().getTime();
 
   // Set a timeout to show the notification
   setTimeout(() => {
     showNotification();
   }, milliseconds);
-  remTitle.innerHTML = mainUITitle.value;
-  console.log(remTitle.value, "jaha print krwana he", mainUITitle.value)
 
-  // localStorage.setItem("title", JSON.stringify(remTitle.value));
-  // mainUITitle.value = JSON.parse(localStorage.getItem("Title"));
-  // console.log(mainUITitle.value, "why", remTitle.value);
+  mainText.innerHTML = `
+  <p id="dum" contenteditable="true">${remTitle.value}</p>
+  `;
 }
 
 function showNotification() {
@@ -117,5 +118,14 @@ function addRem() {
   mainUI.style.display = "none";
 }
 
+// to list me input value show krwana he
 
+function showInput(){
+  dumText.style.display = "block";
+  mainText.style.display= "none";
+  const store = remTitle.value;
+  mainUITitle.value = store;
+  console.log(mainUITitle.value);
+  console.log(store);
 
+}

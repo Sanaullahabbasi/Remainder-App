@@ -38,41 +38,60 @@
   </head>
   <body>
     <!-- getting time and date for reminder in main div -->
-    <div class="main" style="display: none;">
-      <h2>Add  Reminder</h2>
+    <div class="main" style="display: none">
+      <h2>Add Reminder</h2>
       <label for=""
-      ><input type="text" placeholder="Enter Title" id="rem_title" value=""></label
-      >
+        ><input type="text" placeholder="Enter Title" id="rem_title" value=""
+      /></label>
       <input type="datetime-local" id="reminderTime" required />
       <button onclick="setReminder()">Set Reminder</button>
     </div>
     <!--End of getting time and date for reminder in main div -->
-  
 
     <!--  ### to do list main container ##-->
-    <div id="container" >
+    <div id="container">
       <!-- header to show current day and time -->
-    <div id="header">
-      <div id="day"></div>
-      <div id="time"></div>
-    </div>
-    <!-- text where to show reminder or to do list -->
-    <div id="input_area">
-      <div id="add_title">
-        <div class="form-check" id="tick">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            <input type="text" id="title" placeholder="Title" value="">
-          </label>
-        </div>
-        <div id="del_btn">
-          <button><i class="fa-solid fa-trash-can"></i></button>
+      <div id="header">
+        <div id="day"></div>
+        <div id="time"></div>
+      </div>
+      <!-- text where to show reminder or to do list -->
+      <div id="input_area">
+        <div id="add_title">
+          <div class="form-check" id="tick">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              <input
+                type="text"
+                id="title"
+                style="display: none"
+                placeholder="Title"
+                value=""
+              />
+              <div id="mainText"><p id="dum"></p></div>
+            </label>
+          </div>
+          <div class="inp_btn">
+            <div id="edit">
+              <button><i class="fa-solid fa-square-pen" onclick="showInput()"></i></button>
+            </div>
+            <div>
+              <div id="del_btn">
+                <button><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- bottom of container where place a circle to show add icon -->
+      <div id="circle"><i class="fa-solid fa-plus" onclick="addRem()"></i></div>
     </div>
-    <!-- bottom of container where place a circle to show add icon -->
-    <div id="circle"><i class="fa-solid fa-plus" onclick="addRem()"></i></div>
-  </div>
     <script src="app.js"></script>
   </body>
 </html>

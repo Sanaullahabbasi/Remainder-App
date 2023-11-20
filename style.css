@@ -118,13 +118,18 @@ body {
     padding-left: 20px;
     cursor: pointer;
 }
-#del_btn button{
+#del_btn button, #edit button{
     border: none;
     background-color: transparent;
 }
 .fa-trash-can{
     color: red;
     cursor: pointer
+}
+.fa-square-pen{
+  color: green;
+  cursor: pointer;
+  font-size: 18px;
 }
 #circle{
     position: absolute;
@@ -149,6 +154,11 @@ body {
   border-bottom: 1px solid navy;
   padding-bottom: 6px;
   font-size: 18px;
+  }
+  .inp_btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
 
