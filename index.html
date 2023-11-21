@@ -41,7 +41,7 @@
     <div class="main" style="display: none">
       <h2>Add Reminder</h2>
       <label for=""
-        ><input type="text" placeholder="Enter Title" id="rem_title" value=""
+        ><input type="text" placeholder="Enter Title" id="rem_title" onchange="myChangeFunction(this)" value=""
       /></label>
       <input type="datetime-local" id="reminderTime" required />
       <button onclick="setReminder()">Set Reminder</button>
@@ -72,6 +72,7 @@
                 id="title"
                 style="display: none"
                 placeholder="Title"
+                onchange="myReturnChangeFunction(this)"
                 value=""
               />
               <div id="mainText"></div>
@@ -92,6 +93,8 @@
       <!-- bottom of container where place a circle to show add icon -->
       <div id="circle"><i class="fa-solid fa-plus" onclick="addRem()"></i></div>
     </div>
+
+
     <script src="app.js"></script>
   </body>
 </html>

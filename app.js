@@ -10,13 +10,13 @@ function setReminder() {
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
-  if ( remTitle.value.trim() === "") {
+  if (remTitle.value.trim() === "") {
     alert("Please enter a title for the reminder.");
     return;
-  }  else if(!reminderTime){
+  } else if (!reminderTime) {
     alert("Please enter a valid time for the reminder.");
     return;
-  }else{
+  } else {
     mainUI.style.display = "block";
   }
 
@@ -123,11 +123,20 @@ function addRem() {
 
 // to list me input value show krwana he
 
-function showInput(){
-  mainText.style.display = "block";
-  const store = remTitle.value;
-  mainUITitle.value = store;
-  console.log(mainUITitle.value);
-  console.log(store);
+function showInput() {
+  mainText.style.display = "none";
+  mainUITitle.style.display= "block";
+}
 
+function myChangeFunction(input1) {
+  // var input2 = document.getElementById('myInput2');
+  // console.log("input1 value==>",input1.value)
+  // console.log("input2 value==>",input2.value)
+  mainUITitle.value = input1.value;
+}
+function myReturnChangeFunction(input2) {
+  // var input1 = document.getElementById('myInput1');
+  console.log("input1 value==>",input1.value)
+  console.log("input2 value==>",input2.value)
+  remTitle.value = input2.value;
 }
