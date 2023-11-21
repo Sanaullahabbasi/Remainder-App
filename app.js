@@ -3,18 +3,21 @@ let mainUI = document.getElementById("container"),
   addRemUI = document.querySelector(".main"),
   remTitle = document.getElementById("rem_title"),
   mainUITitle = document.getElementById("title"),
-  mainText = document.getElementById("mainText"),
-  dumText = document.getElementById("dum");
+  mainText = document.getElementById("mainText");
 
 function setReminder() {
   addRemUI.style.display = "none";
-  mainUI.style.display = "block";
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
-  if (!reminderTime) {
+  if ( remTitle.value.trim() === "") {
+    alert("Please enter a title for the reminder.");
+    return;
+  }  else if(!reminderTime){
     alert("Please enter a valid time for the reminder.");
     return;
+  }else{
+    mainUI.style.display = "block";
   }
 
   // Parse the time and convert it to milliseconds
@@ -27,7 +30,7 @@ function setReminder() {
   }, milliseconds);
 
   mainText.innerHTML = `
-  <p id="dum" contenteditable="true">${remTitle.value}</p>
+  <p contenteditable="true">${remTitle.value}</p>
   `;
 }
 
@@ -121,8 +124,7 @@ function addRem() {
 // to list me input value show krwana he
 
 function showInput(){
-  dumText.style.display = "block";
-  mainText.style.display= "none";
+  mainText.style.display = "block";
   const store = remTitle.value;
   mainUITitle.value = store;
   console.log(mainUITitle.value);
