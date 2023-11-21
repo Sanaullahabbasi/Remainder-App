@@ -129,14 +129,10 @@ function showInput() {
 }
 
 function myChangeFunction(input1) {
-  // var input2 = document.getElementById('myInput2');
-  // console.log("input1 value==>",input1.value)
-  // console.log("input2 value==>",input2.value)
   mainUITitle.value = input1.value;
+  return input1.value
 }
 function myReturnChangeFunction(input2) {
-  // var input1 = document.getElementById('myInput1');
-  console.log("input1 value==>",input1.value)
-  console.log("input2 value==>",input2.value)
   remTitle.value = input2.value;
+  return input2.value
 }
