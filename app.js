@@ -25,10 +25,7 @@ function setReminder() {
 
   const milliseconds = new Date(reminderTime).getTime() - new Date().getTime();
 
-  // Set a timeout to show the notification
-  setTimeout(() => {
-    showNotification();
-  }, milliseconds);
+
 
   // mainText.innerHTML = `
   // <p>${remTitle.value}</p>
@@ -68,6 +65,11 @@ function setReminder() {
           </div>
         </div>
   `
+
+    // Set a timeout to show the notification
+    setTimeout(() => {
+      showNotification();
+    }, milliseconds);
 }
 }
 
@@ -163,13 +165,18 @@ function addRem() {
 function showInput() {
   mainText.style.display = "none";
   mainUITitle.style.display= "block";
+  // console.log(mainUITitle)
 }
 
 function myChangeFunction(input1) {
   mainUITitle.value = input1.value;
   return input1.value
+  // console.log("runing2")
 }
+
 function myReturnChangeFunction(input2) {
   remTitle.value = input2.value;
   return input2.value
+  // console.log("runing3")
+
 }

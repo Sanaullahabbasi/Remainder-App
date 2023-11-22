@@ -90,17 +90,16 @@ body {
 #container {
   width: 450px;
   height: 550px;
-  border: 1px solid black;
   border-radius: 5px;
   color: blue;
   background-color: #fff;
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #header {
   width: 450px;
   height: 90px;
-  border-bottom: 1px solid black;
-  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;  display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 24px;
@@ -118,8 +117,7 @@ body {
   width: 450px;
   height: 400px;
   margin-left: -1px;
-  border: 1px solid red;
-}
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;}
 #add_title {
   display: flex;
   justify-content: space-between;
