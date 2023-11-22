@@ -182,6 +182,16 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
+#fajar-time, #zuhar-time, #asar-time, #maghrib-time, #isha-time{
+  position: relative;;
+}
+.fa-person-praying{
+  font-size: 22px;
+  color: #0000ff;
+  position: absolute;
+  left: 16px;
+  top: 27px;
+}
 
 /******  Extra small device media querry  ******/
 
