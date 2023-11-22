@@ -3,10 +3,10 @@ let mainUI = document.getElementById("container"),
   addRemUI = document.querySelector(".main"),
   remTitle = document.getElementById("rem_title"),
   mainUITitle = document.getElementById("title"),
-  mainText = document.getElementById("mainText");
+  mainText = document.getElementById("mainText"),
+  inputArea = document.getElementById("input_area");
 
 function setReminder() {
-  addRemUI.style.display = "none";
   // Get user input for reminder time
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
@@ -17,8 +17,9 @@ function setReminder() {
     alert("Please enter a valid time for the reminder.");
     return;
   } else {
+    addRemUI.style.display = "none";
     mainUI.style.display = "block";
-  }
+  
 
   // Parse the time and convert it to milliseconds
 
@@ -29,9 +30,45 @@ function setReminder() {
     showNotification();
   }, milliseconds);
 
-  mainText.innerHTML = `
-  <p contenteditable="true">${remTitle.value}</p>
-  `;
+  // mainText.innerHTML = `
+  // <p>${remTitle.value}</p>
+  // `;
+
+  inputArea.innerHTML += `
+  <div id="add_title">
+          <div class="form-check" id="tick">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckChecked"
+              checked
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              <input
+                type="text"
+                id="title"
+                style="display: none"
+                placeholder="Title"
+                onchange="myReturnChangeFunction(this)"
+                value=""
+              />
+              <div id="mainText"> <p>${remTitle.value}</p></div>
+            </label>
+          </div>
+          <div class="inp_btn">
+            <div id="edit">
+              <button><i class="fa-solid fa-square-pen" title="edit" onclick="showInput()"></i></button>
+            </div>
+            <div>
+              <div id="del_btn">
+                <button><i class="fa-solid fa-trash-can" title="delete"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+  `
+}
 }
 
 function showNotification() {
