@@ -24,48 +24,9 @@ function setReminder() {
   // Parse the time and convert it to milliseconds
 
   const milliseconds = new Date(reminderTime).getTime() - new Date().getTime();
-
-
-
-  // mainText.innerHTML = `
-  // <p>${remTitle.value}</p>
-  // `;
-
-  inputArea.innerHTML += `
-  <div id="add_title">
-          <div class="form-check" id="tick">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckChecked"
-              checked
-            />
-            <label class="form-check-label" for="flexCheckChecked">
-              <input
-                type="text"
-                id="title"
-                style="display: none"
-                placeholder="Title"
-                onchange="myReturnChangeFunction(this)"
-                value=""
-              />
-              <div id="mainText"> <p>${remTitle.value}</p></div>
-            </label>
-          </div>
-          <div class="inp_btn">
-            <div id="edit">
-              <button><i class="fa-solid fa-square-pen" title="edit" onclick="showInput()"></i></button>
-            </div>
-            <div>
-              <div id="del_btn">
-                <button><i class="fa-solid fa-trash-can" title="delete"></i></button>
-              </div>
-            </div>
-          </div>
-        </div>
-  `
-
+  mainText.innerHTML = `
+  <p>${remTitle.value}</p>
+  `;
     // Set a timeout to show the notification
     setTimeout(() => {
       showNotification();
