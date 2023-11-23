@@ -11,10 +11,42 @@ function setReminder() {
   const reminderTime = document.getElementById("reminderTime").value;
   // Validate the input
   if (remTitle.value.trim() === "") {
-    alert("Please enter a title for the reminder.");
+    Swal.fire({
+      title: "Please enter a title for the reminder.",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
     return;
   } else if (!reminderTime) {
-    alert("Please enter a valid time for the reminder.");
+    Swal.fire({
+      title: "Please enter a valid time for the reminder.",
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
     return;
   } else {
     addRemUI.style.display = "none";
