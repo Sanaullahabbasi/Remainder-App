@@ -4,7 +4,8 @@ let mainUI = document.getElementById("container"),
   remTitle = document.getElementById("rem_title"),
   mainUITitle = document.getElementById("title"),
   mainText = document.getElementById("mainText"),
-  inputArea = document.getElementById("input_area");
+  inputArea = document.getElementById("input_area"),
+  inputField = document.getElementById("add_title");
 
 function setReminder() {
   // Get user input for reminder time
@@ -18,15 +19,15 @@ function setReminder() {
           animate__animated
           animate__fadeInUp
           animate__faster
-        `
+        `,
       },
       hideClass: {
         popup: `
           animate__animated
           animate__fadeOutDown
           animate__faster
-        `
-      }
+        `,
+      },
     });
     return;
   } else if (!reminderTime) {
@@ -37,33 +38,34 @@ function setReminder() {
           animate__animated
           animate__fadeInUp
           animate__faster
-        `
+        `,
       },
       hideClass: {
         popup: `
           animate__animated
           animate__fadeOutDown
           animate__faster
-        `
-      }
+        `,
+      },
     });
     return;
   } else {
     addRemUI.style.display = "none";
     mainUI.style.display = "block";
-  
+    inputField.style.display = "block";
 
-  // Parse the time and convert it to milliseconds
+    // Parse the time and convert it to milliseconds
 
-  const milliseconds = new Date(reminderTime).getTime() - new Date().getTime();
-  mainText.innerHTML = `
+    const milliseconds =
+      new Date(reminderTime).getTime() - new Date().getTime();
+    mainText.innerHTML = `
   <p>${remTitle.value}</p>
   `;
     // Set a timeout to show the notification
     setTimeout(() => {
       showNotification();
     }, milliseconds);
-}
+  }
 }
 
 function showNotification() {
@@ -157,19 +159,21 @@ function addRem() {
 
 function showInput() {
   mainText.style.display = "none";
-  mainUITitle.style.display= "block";
+  mainUITitle.style.display = "block";
   // console.log(mainUITitle)
 }
 
 function myChangeFunction(input1) {
   mainUITitle.value = input1.value;
-  return input1.value
+  return input1.value;
   // console.log("runing2")
 }
 
 function myReturnChangeFunction(input2) {
   remTitle.value = input2.value;
-  return input2.value
+  return input2.value;
   // console.log("runing3")
-
+}
+function delInput() {
+  inputField.style.display = "none";
 }
